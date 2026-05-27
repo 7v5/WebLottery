@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/css/uikit.min.css" />
-        <script
-            src="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/js/uikit.min.js"></script>
-        <script
-            src="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/js/uikit-icons.min.js"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/css/uikit.min.css" />
+        <link rel="stylesheet" href="css/styles.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/js/uikit-icons.min.js"></script>
     </head>
 
     <body>
@@ -19,7 +17,7 @@
                 <legend class="uk-legend">Legend</legend>
 
                 <div class="uk-margin">
-                    <input class="uk-input" type="text" placeholder="Input"
+                    <input id="inputNum" class="uk-input" type="text" placeholder="Input"
                         aria-label="Input">
                 </div>
 
@@ -57,5 +55,10 @@
 
             </fieldset>
         </form>
+
+        <button class="uk-button uk-button-default" id="myButton">Button</button>
+
+
+        <script src="js/script.js"></script>
     </body>
 </html>
