@@ -10,20 +10,19 @@
 
     <body>
         <div class="page-wrapper">
-            
             <div class="game-row">
                 
                 <div id="ticketContainer" class="card-container">
                     <fieldset class="uk-fieldset">
                         <legend class="uk-legend">Ticket Type</legend>
                         <div class="radio-group">
-                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoSmall" checked> Small Ticket</label>
-                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMedium"> Medium Ticket</label>
-                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMega"> Mega Ticket</label>
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoSmall" checked> Basic Ticket $1 (3 Picks) 1-20</label>
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMedium"> Standard Ticket $3 (5 Picks) 1-50</label>
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMega"> Mega Ticket $5 (6 Picks) 1-60</label>
                         </div>
                     </fieldset>
 
-                    <div style="padding-top: 20px;"> <label><input type="checkbox" class="uk-checkbox" id="chkPowerball"> Powerball Ticket</label>
+                    <div style="padding-top: 20px;"> <label><input type="checkbox" class="uk-checkbox" id="chkPowerball"> PowerBall $2 (1 Pick) 1-10</label>
                     </div>
                 </div>
 
@@ -37,7 +36,8 @@
                     <legend class="uk-legend">Instructions</legend>
                     <span class="uk-text spacing-bottom">
                         Enter your picks<br>
-                        ex. "1 2 3 4 5"
+                        ex. "1 2 3 4 5"<br>
+                        Hit play!
                     </span>
 
                     <legend class="uk-legend">Powerball Instructions</legend>
@@ -56,12 +56,12 @@
                 
                 <div id="outcomeContainer" class="card-container card-container-center">
                     <legend class="uk-legend text-center">Outcome</legend>
-                    <span class="uk-text text-center" id="txtOutcome">To Be Determined</span>
+                    <span class="uk-text text-center result-box" id="txtOutcome">Not Available Yet</span>
                 </div>
 
                 <div id="winningNumContainer" class="card-container card-container-center">
                     <legend class="uk-legend text-center">Winning Numbers</legend>
-                    <span class="uk-text text-center" id="txtWinningNumbers">1 2 3</span>
+                    <span class="uk-text text-center result-box" id="txtWinningNumbers">Not Available Yet</span>
                 </div>
 
                 <div id="winningSummaryContainer" class="card-container">
@@ -75,9 +75,9 @@
                         </div>
 
                         <div id="summaryValues" class="value-column">
-                            <span class="uk-text currency-box" id="txtTotalSpent">$0</span>
-                            <span class="uk-text currency-box" id="txtTotalWinnings">$0</span>
-                            <span class="uk-text currency-box" id="txtNetProfit">$0</span>
+                            <span class="uk-text result-box" id="txtTotalSpent">$0</span>
+                            <span class="uk-text result-box" id="txtTotalWinnings">$0</span>
+                            <span class="uk-text result-box" id="txtNetProfit">$0</span>
                         </div>
                     </div>
                 </div>

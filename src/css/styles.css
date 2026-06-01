@@ -26,7 +26,7 @@ body {
     margin: 20px 0;
     border-radius: 50px;
     width: 100%;
-    max-width: 850px;
+    max-width: fit-content;
     box-sizing: border-box;
     background-color: #ffffff;
 }
@@ -70,6 +70,11 @@ body {
     padding-bottom: 10px;
 }
 
+label {
+    max-width: fit-content;
+    white-space: nowrap;
+}
+
 .text-center {
     text-align: center;
 }
@@ -92,10 +97,11 @@ body {
     align-items: center;
 }
 
-.currency-box {
+.result-box {
     border: 1px solid #808080;
     border-radius: 5px;
-    width: 50px;
+    width: fit-content;
     text-align: center;
     display: inline-block;
+    padding: 0 5px;
 }
