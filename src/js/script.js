@@ -1,16 +1,11 @@
-// Game Variables
+let button = document.getElementById("btnPlay");
+button.addEventListener("click", mainGame());
 
-
-// Element Variables
-
-
-
-
-
-
-var inputNum = document.getElementById("inputNum");
-
-document.getElementById("myButton").addEventListener("click", function() {
-    inputNum.style.backgroundColor = "green";
-    alert("You picked: " + inputNum.innerHTML);
+let chkPowerball = document.getElementById("chkPowerball");
+chkPowerball.addEventListener("change", function() {
+    document.getElementById("txtPowerballPick").style.display = chkPowerball.checked ? "flex" : "none";
 });
+
+function mainGame() {
+    
+}

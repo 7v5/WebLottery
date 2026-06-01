@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Lottery Game</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/css/uikit.min.css" />
         <link rel="stylesheet" href="css/styles.css"/>
         <script src="https://cdn.jsdelivr.net/npm/uikit@3.25.16/dist/js/uikit.min.js"></script>
@@ -8,56 +9,81 @@
     </head>
 
     <body>
-        <span class="uk-badge">1203012301203</span>
-        <span class="uk-badge">100</span>
+        <div class="page-wrapper">
+            
+            <div class="game-row">
+                
+                <div id="ticketContainer" class="card-container">
+                    <fieldset class="uk-fieldset">
+                        <legend class="uk-legend">Ticket Type</legend>
+                        <div class="radio-group">
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoSmall" checked> Small Ticket</label>
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMedium"> Medium Ticket</label>
+                            <label><input type="radio" class="uk-radio" name="ticketType" id="rdoMega"> Mega Ticket</label>
+                        </div>
+                    </fieldset>
 
-        <form>
-            <fieldset class="uk-fieldset">
-
-                <legend class="uk-legend">Legend</legend>
-
-                <div class="uk-margin">
-                    <input id="inputNum" class="uk-input" type="text" placeholder="Input"
-                        aria-label="Input">
+                    <div style="padding-top: 20px;"> <label><input type="checkbox" class="uk-checkbox" id="chkPowerball"> Powerball Ticket</label>
+                    </div>
                 </div>
 
-                <div class="uk-margin">
-                    <select class="uk-select" aria-label="Select">
-                        <option>Option 01</option>
-                        <option>Option 02</option>
-                    </select>
+                <div id="userPicks" class="card-container">
+                    <legend class="uk-legend">Number Picks</legend>
+                    <label><input type="text" class="uk-input" id="txtUserPicks" placeholder="Enter your picks"></label>
+                    <label><input type="text" class="uk-input" id="txtPowerballPick" placeholder="Enter your Powerball pick" style="display: none;"></label>
                 </div>
 
-                <div class="uk-margin">
-                    <textarea class="uk-textarea" rows="5"
-                        placeholder="Textarea" aria-label="Textarea"></textarea>
+                <div id="instructions" class="card-container">
+                    <legend class="uk-legend">Instructions</legend>
+                    <span class="uk-text spacing-bottom">
+                        Enter your picks<br>
+                        ex. "1 2 3 4 5"
+                    </span>
+
+                    <legend class="uk-legend">Powerball Instructions</legend>
+                    <span class="uk-text">
+                        Enter your guess<br>
+                        If you get it right, you win $10
+                    </span>
+                </div>
+            </div> 
+
+            <div class="button-row">
+                <button class="uk-button-primary uk-button uk-button-large" id="btnPlay">Let's Play!</button>
+            </div>
+
+            <div class="game-row">
+                
+                <div id="outcomeContainer" class="card-container card-container-center">
+                    <legend class="uk-legend text-center">Outcome</legend>
+                    <span class="uk-text text-center" id="txtOutcome">To Be Determined</span>
                 </div>
 
-                <div
-                    class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label><input class="uk-radio" type="radio" name="radio2"
-                            checked> A</label>
-                    <label><input class="uk-radio" type="radio" name="radio2">
-                        B</label>
+                <div id="winningNumContainer" class="card-container card-container-center">
+                    <legend class="uk-legend text-center">Winning Numbers</legend>
+                    <span class="uk-text text-center" id="txtWinningNumbers">1 2 3</span>
                 </div>
 
-                <div
-                    class="uk-margin uk-grid-small uk-child-width-auto uk-grid">
-                    <label><input class="uk-checkbox" type="checkbox" checked>
-                        A</label>
-                    <label><input class="uk-checkbox" type="checkbox"> B</label>
+                <div id="winningSummaryContainer" class="card-container">
+                    <legend class="uk-legend text-center">Winning Summary</legend>
+
+                    <div class="summary-wrapper">
+                        <div id="summaryLabels" class="label-column">
+                            <span class="uk-text">Total Spent:</span>
+                            <span class="uk-text">Total Winnings:</span>
+                            <span class="uk-text">Total Profit:</span>
+                        </div>
+
+                        <div id="summaryValues" class="value-column">
+                            <span class="uk-text currency-box" id="txtTotalSpent">$0</span>
+                            <span class="uk-text currency-box" id="txtTotalWinnings">$0</span>
+                            <span class="uk-text currency-box" id="txtNetProfit">$0</span>
+                        </div>
+                    </div>
                 </div>
+            </div>
 
-                <div class="uk-margin">
-                    <input class="uk-range" type="range" value="2" min="0"
-                        max="10" step="0.1" aria-label="Range">
-                </div>
-
-            </fieldset>
-        </form>
-
-        <button class="uk-button uk-button-default" id="myButton">Button</button>
-
+        </div> 
 
         <script src="js/script.js"></script>
     </body>
