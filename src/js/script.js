@@ -82,7 +82,7 @@ function btnPlayClick() {
 
 function setConditionalTextColor() {
     document.getElementById("txtNetProfit").style.backgroundColor = defaultColor;
-    document.getElementById("txtNetProfit").style.backgroundColor = (winnings - spent > 0) ? "green" : "red";
+    document.getElementById("txtNetProfit").style.backgroundColor = (winnings - spent > 0) ? "limegreen" : "red";
 }
 
 function checkPicksWithinRange(guesses, ticket) {
